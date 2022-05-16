@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: #050e2d;
+}
+
+/*scroll bar*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #ffe033;
+    border-radius: 5px;
+}
+
+
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 7px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    transition: 0.5s;
+    z-index: 1000;
+
+}
+header.sticky{
+    background: #1b2141;
+    box-shadow: 0 5px 13px #ffe033;
+    
+}
+header .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin: 10px;
+}
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+header ul li a:hover{
+    background: #ffe033;
+    color: #050e2d;
+    box-shadow: 0 0 10px #ffe033;
+}
+
+
+/*home*/
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .bg{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .bg .content{
+    width: 50%;
+    height: 100%;
+}
+.banner .bg .content h2{
+    font-size: 4em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .bg .content p{
+    font-size:1em ;
+    color: #dbd9d9;
+    letter-spacing: 1px;
+}
+.banner .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    outline: none;
+    background: transparent;
+    border: 1px solid #ffe033;
+    text-decoration: none;
+    font-weight: 700;
+    width: 150px;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .bg .content a:hover{
+   
+    background: #ffe033;
+    color: #050e2d;
+    box-shadow: 0 0 10px #ffe033;
+}
+.banner .bg  img{
+    width: 550px;
+}
+/*about*/
+
+.about{
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .contentBx{
+    width: 50%;
+    margin: 40px;
+}
+.about .contentBx h2{
+    font-size: 4em;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.about .contentBx p{
+   
+    text-align: justify;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 1px;
+
+}
+.about .contentBx img{
+    width: 500px;
+    
+}
+
+/*game*/
+.games{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+.games h2{
+    color: #fff;
+    margin: 10px 0;
+}
+.games ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.games ul li{
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+}
+.games ul li.active{
+    background:#ffe033;
+    color: #050e2d;
+    box-shadow: 0 0 10px #ffe033;
+}
+
+.games .cardBx{
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.games .cardBx .card{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    overflow: hidden;
+    cursor: pointer;
+}
+.games .cardBx .card:hover{
+    box-shadow:5px 5px  5px #ffe033;
+    transition: all;
+}
+.games .cardBx .card img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+
+}
+.games .cardBx .card .content{
+    padding: 5px;
+}
+.games .cardBx .card .content h4{
+    color: #fff;
+    margin: 5px 0;
+}
+.games .cardBx .card .content p{
+    color: #fff;
+}
+.games .cardBx .card.hide{
+    display: none;
+}
+
+/*vdo*/
+.container h2{
+    padding: 50px 0 ;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.col{
+    flex-basis: 50%;
+    min-width:100px;
+}
+.feature-img{
+    width: 83%;
+    margin: 100px;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+.small-img-row{
+    display: flex;
+    background-color: #fff;
+    margin: 25px 0;
+    align-items: center;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 80%;
+   
+}
+.small-img{
+    position: relative;
+    height: 80px;
+}
+.small-img img{
+    width: 150px;
+    height: auto;
+}
+
+.small-img-row p{
+    margin-left: 20px;
+    color: #050e2d;
+    line-height: 22px;
+    font-size: 15px;
+}
+
+.play-btn{
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.small-img .play-btn{
+    width: 35px;
+}
+.video-player{
+    width:60%;
+    position:absolute;
+    left: 50%;
+    transform: translate(-60%,-100%);
+    display: none;
+}
+video:focus{
+    outline: none;
+}
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+/*Contact*/
+
+.contact form{
+    padding: 20px 100px;
+    width: 90%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.contact  img{
+    height: 40%;
+    width: 40%;
+    margin-left: 60px ;
+    object-fit: cover;
+    border-radius: 10px;
+}*/
+
+.contact .form{
+    width: 50%;
+    margin: 30px;
+
+}
+.contact .form h1{
+    color: #fff;
+    margin-left: 30%;
+    font-size: 50;
+}
+.contact .form .inputBx{
+    margin: 10px 0;
+}
+.contact .form .inputBx p{
+    color: #fff;
+}
+.contact .form .inputBx input,
+.contact .form .inputBx textarea{
+   border: none;
+   outline: none;
+   padding: 10px;
+   width: 100%;
+   color: #fff;
+   background: #1b2141;
+   min-height: 15px;
+   font-size: 1.1em;
+
+}
+.contact .form .inputBx textarea{
+    height: 150px;
+}
+.contact .form .inputBx .button input[type="submit"]{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    outline: none;
+    background: transparent;
+    border: 1px solid #ffe033;
+    text-decoration: none;
+    font-weight: 700;
+    width: 150px;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.contact .form .inputBx button input[type="submit"]:hover{
+    background-color: #ffe033;
+    border: none;
+    color: #050e2d;
+    box-shadow: 0 0 10px #ffe033;
+    cursor: pointer;
+}
+.alert{
+    width: 50%;
+    background:rgb(0,255,106);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+    
+}
+
+/*footer*/
+
+footer{
+    padding: 90px 80px;
+}
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .info .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+footer .info p{
+    color: #fff;
+}
+
+footer .info ul{
+    margin: 10px 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .info ul li{
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ffe033;
+    cursor: pointer;
+}
+footer .info ul li:hover{
+    background: #ffe033;
+    border: none;
+    box-shadow: 0 0 10px #ffe033;
+}
+footer .info ul li a i{
+    font-size: 1.5em;
+    color: #fff;
+}
+footer .info ul li:hover a i{
+    color: #050e2d;
+}
+
+/*responsive design*/
+@media(max-width:991px){
+    header{
+        padding:10px 10px;
+    }
+    header .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #1b2141;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1000;
+    }
+    header .nav.active{
+        display: flex;
+    }
+    header .nav li{
+        margin: 20px 0;
+    }
+    header .nav li a{
+        font-size: 25px;
+        margin: 10px 0;
+    }
+    .toggleMenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(images/menuuuu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .toggleMenu.active{
+        background: url(images/cls22.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        
+    }
+    .banner .bg img{
+        position: absolute;
+    }
+    .banner .bg .content{
+        width: 700px;
+        height: 500px;
+        background: rgb(27 33 65 / 50%);
+        padding: 50px 10px;
+        z-index: 1;
+        border-radius: 10px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about .contentBx{
+        width: 100%;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact img{
+        height: 100%;
+        width: 100%;
+    }
+    .contact .form{
+        width: 100%;
+        margin: 30px;
+        padding: 10px;
+    }
+    .contact .form h1{
+        text-align: center;
+    }
+    .footer .info{
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .row{
+        flex-direction: column;
+        width: 90%;
+    }
+    .col{
+        margin-left: 90px;
+    }
+   
+}
